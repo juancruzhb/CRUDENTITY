@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.gridContacts = new System.Windows.Forms.DataGridView();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gridContacts = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -49,8 +49,8 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.btnSearch);
+            this.splitContainer1.Panel1.Controls.Add(this.btnEdit);
+            this.splitContainer1.Panel1.Controls.Add(this.btnRemove);
             this.splitContainer1.Panel1.Controls.Add(this.btnAdd);
             // 
             // splitContainer1.Panel2
@@ -60,14 +60,27 @@
             this.splitContainer1.SplitterDistance = 106;
             this.splitContainer1.TabIndex = 0;
             // 
-            // gridContacts
+            // btnEdit
             // 
-            this.gridContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridContacts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridContacts.Location = new System.Drawing.Point(0, 0);
-            this.gridContacts.Name = "gridContacts";
-            this.gridContacts.Size = new System.Drawing.Size(800, 340);
-            this.gridContacts.TabIndex = 0;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(158, 30);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(115, 48);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(298, 30);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(115, 48);
+            this.btnRemove.TabIndex = 1;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
@@ -80,25 +93,17 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnSearch
+            // gridContacts
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(298, 30);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(115, 48);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Remove";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(158, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 48);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.gridContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridContacts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridContacts.Location = new System.Drawing.Point(0, 0);
+            this.gridContacts.MultiSelect = false;
+            this.gridContacts.Name = "gridContacts";
+            this.gridContacts.ReadOnly = true;
+            this.gridContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridContacts.Size = new System.Drawing.Size(800, 340);
+            this.gridContacts.TabIndex = 0;
             // 
             // Main
             // 
@@ -122,8 +127,8 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView gridContacts;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
     }
 }
